@@ -4,10 +4,12 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { TabBarComponent } from './tab-bar/tab-bar.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TabBarComponent
   ],
   imports: [
     BrowserModule,
