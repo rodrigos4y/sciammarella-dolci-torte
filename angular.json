@@ -24,9 +24,12 @@
               "src/manifest.json"
             ],
             "styles": [
+              "src/assets/materialize/css/materialize.sass",
               "src/styles.sass"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/materialize/js/materialize.min.js"
+            ]
           },
           "configurations": {
             "production": {
