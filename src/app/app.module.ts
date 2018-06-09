@@ -12,6 +12,7 @@ import { CatalogoComponent } from './pages/catalogo/catalogo.component';
 import { OrcamentoComponent } from './pages/orcamento/orcamento.component';
 import { PedidoComponent } from './pages/pedido/pedido.component';
 import { NgxMaskModule } from 'ngx-mask';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { NgxMaskModule } from 'ngx-mask';
     BrowserModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
     AppRoutingModule,
-    NgxMaskModule.forRoot()
+    NgxMaskModule.forRoot(),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

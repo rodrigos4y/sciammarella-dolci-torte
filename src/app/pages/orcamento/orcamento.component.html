@@ -4,23 +4,61 @@
     <p class="c-orcamento__texto center-align">Peça seu orçamento sem custo</p>
   </div>
 
-  <form class="col s12 container">
+  <form class="col s12 container c-client-form" [formGroup] = "clientForm">
     <div class="row">
       <div class="input-field col s12">
-        <input id="nome" type="text" class="validate">
-        <label for="nome">Nome</label>
+        <input 
+          id="nome" 
+          name="nome"
+          type="text" 
+          class="validate"
+          formControlName="nome"
+        >
+        <label for="nome">Nome*</label>
+      </div>
+      <div 
+        *ngIf="clientForm.controls.nome.invalid && (clientForm.controls.nome.dirty || clientForm.controls.nome.touched) "
+        class="c-client-form--error uppercase"
+      >
+        <p class="red-text" *ngIf="clientForm.controls.nome.errors.required">Campo obrigatório</p>
       </div>
     </div>
     <div class="row">
       <div class="input-field col s12">
-        <input id="email" type="email" class="validate">
-        <label for="email">E-mail</label>
+        <input 
+          id="email" 
+          name="email"
+          type="email" 
+          class="validate"
+          formControlName="email"
+        >
+        <label for="email">E-mail*</label>
+      </div>
+      <div 
+        *ngIf="clientForm.controls.email.invalid && (clientForm.controls.email.dirty || clientForm.controls.email.touched) "
+        class="c-client-form--error uppercase"
+      >
+        <p class="red-text" *ngIf="clientForm.controls.email.errors.required">Campo obrigatório</p>
+        <p class="red-text" *ngIf="clientForm.controls.email.errors.pattern">E-mail inválido</p>
       </div>
     </div>
     <div class="row">
       <div class="input-field col s12">
-        <input id="telefone" type="tel" class="validate" mask="(00)9999-99999">
-        <label for="telefone">Telefone</label>
+        <input 
+          id="telefone" 
+          name="telefone"
+          type="tel" 
+          class="validate" 
+          mask="(00)9999-99999"
+          formControlName="telefone"
+        >
+        <label for="telefone">Telefone*</label>
+      </div>
+      <div 
+        *ngIf="clientForm.controls.telefone.invalid && (clientForm.controls.telefone.dirty || clientForm.controls.telefone.touched) "
+        class="c-client-form--error uppercase"
+      >
+        <p class="red-text" *ngIf="clientForm.controls.telefone.errors.required">Campo obrigatório</p>
       </div>
     </div>
     <div class="row">
@@ -41,7 +79,11 @@
     </div>
     <div class="row">
       <div class="input-field col s12">
-        <textarea id="obs" class="materialize-textarea pw-textarea"></textarea>
+        <textarea 
+          id="obs" 
+          name="obs" 
+          class="materialize-textarea pw-textarea"
+          formControlName="obs"></textarea>
         <label for="obs">Observações</label>
       </div>
     </div>
