@@ -1,7 +1,7 @@
 {
-  "name": "sciammarella-dolci-torte",
-  "short_name": "sciammarella-dolci-torte",
-  "theme_color": "#1976d2",
+  "name": "Sciammarella Dolci & Torte",
+  "short_name": "SDT",
+  "theme_color": "#079545",
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "/",
