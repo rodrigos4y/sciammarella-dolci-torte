@@ -24,6 +24,10 @@ export class OrcamentoComponent implements OnInit {
     })
   }
 
-  
+  onSubmit(){
+    if(this.clientForm.valid){
+      console.log(this.clientForm.value);
+    }
+  }
 
 }

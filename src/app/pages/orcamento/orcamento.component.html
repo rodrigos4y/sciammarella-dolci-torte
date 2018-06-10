@@ -4,7 +4,11 @@
     <p class="c-orcamento__texto center-align">Peça seu orçamento sem custo</p>
   </div>
 
-  <form class="col s12 container c-client-form" [formGroup] = "clientForm">
+  <form 
+    class="col s12 container c-client-form" 
+    [formGroup] = "clientForm"
+    (ngSubmit) = "onSubmit()"
+  >
     <div class="row">
       <div class="input-field col s12">
         <input 
