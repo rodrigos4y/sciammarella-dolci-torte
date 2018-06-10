@@ -23,6 +23,7 @@
     "@angular/service-worker": "^6.0.3",
     "angularfire2": "^5.0.0-rc.10",
     "core-js": "^2.5.4",
+    "emailjs-com": "^2.1.1",
     "firebase": "^5.0.4",
     "ngx-mask": "^2.9.3",
     "rxjs": "^6.0.0",

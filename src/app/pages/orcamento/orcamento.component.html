@@ -6,6 +6,7 @@
 
   <form 
     class="col s12 container c-client-form" 
+    id="clientForm"
     [formGroup] = "clientForm"
     (ngSubmit) = "onSubmit()"
   >
@@ -69,13 +70,21 @@
       <div class="input-field col s12">
           <div>
             <label>
-              <input type="checkbox" />
+              <input 
+                type="checkbox"
+                id="boloDecorado"
+                name="boloDecorado"
+                formControlName="produto" />
               <span>Bolo Decorado</span>
             </label>
           </div>
           <div>
             <label>
-              <input type="checkbox" />
+              <input 
+                type="checkbox"
+                id="docesGourmet"
+                name="docesGourmet"
+                formControlName="produto" />
               <span>Doces Gourmet</span>
             </label>
           </div>
@@ -92,7 +101,7 @@
       </div>
     </div>
     <div class="c-orcamento__botoes-box">
-      <a class="waves-effect waves-light btn uppercase verde disabled">Pedir orçamento</a>
+      <button type="submit" class="waves-effect waves-light btn uppercase verde">Pedir orçamento</button>
       <a routerLink="/home" class="waves-effect waves-light btn uppercase verde">Voltar</a>
     </div>
   </form>

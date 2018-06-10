@@ -10,7 +10,7 @@ export class OrcamentoComponent implements OnInit {
 
   clientForm : FormGroup;
   emailPattern = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
-
+  
   constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
@@ -20,13 +20,18 @@ export class OrcamentoComponent implements OnInit {
         Validators.required, Validators.pattern(this.emailPattern)
       ]),
       telefone: new FormControl('', Validators.required),
-      obs: new FormControl('')
+      obs: new FormControl(''),
+      produto: new FormControl('')
     })
   }
 
   onSubmit(){
     if(this.clientForm.valid){
       console.log(this.clientForm.value);
+      console.log(this.clientForm.value.nome);
+      console.log(this.clientForm.value.email);
+      console.log(this.clientForm.value.telefone);
+      console.log(this.clientForm.value.obs);
     }
   }
 
