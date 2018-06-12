@@ -18,15 +18,7 @@
         emailjs.init("user_C1XGyAKMxEjWvAHrgCU5s");
     })();
   </script>
-  <script type="text/javascript">
-    window.onload = function() {
-        document.getElementById('clientForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            this.contact_number.value = Math.random() * 100000 | 0;
-            emailjs.send("mailgun", "e_mail_de_contato", {});
-        });
-    }
-  </script>
+  
 </head>
 <body>
   <app-root></app-root>
