@@ -40,7 +40,7 @@ export class OrcamentoComponent implements OnInit {
       })
     }
     let data = {
-      service_id: 'default_service',
+      service_id: 'smtp_server',
       template_id: 'e_mail_de_contato',
       user_id: 'user_C1XGyAKMxEjWvAHrgCU5s',
       template_params: {
