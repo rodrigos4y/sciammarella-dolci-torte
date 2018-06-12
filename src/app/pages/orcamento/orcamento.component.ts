@@ -32,6 +32,13 @@ export class OrcamentoComponent implements OnInit {
   
 
   onSubmit(){
+    if($('.produto:checked').length != 0){
+      var prod = new Array();
+
+      $('.produto:checked').each(function(){
+        prod.push($(this).val());
+      })
+    }
     let data = {
       service_id: 'default_service',
       template_id: 'e_mail_de_contato',
@@ -40,6 +47,7 @@ export class OrcamentoComponent implements OnInit {
         "name": this.clientForm.value.nome,
         "email": this.clientForm.value.email,
         "telefone": this.clientForm.value.telefone,
+        "produtos": prod.join(", "),
         "message": this.clientForm.value.obs
       }
     }
