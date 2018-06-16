@@ -27,6 +27,7 @@
             ],
             "styles": [
               "src/assets/materialize/css/materialize.sass",
+              "src/assets/icons/font/flaticon.css",
               "src/styles.sass"
             ],
             "scripts": [

@@ -3,6 +3,8 @@
 
 body
     margin: 0
+textarea.pw-textarea
+    height: 150px
 .pw-main
     min-height: calc(100vh - 50px)
 .pw-footer
@@ -11,18 +13,16 @@ body
     background-color: #f00
     position: relative
     z-index: 9
-textarea.pw-textarea
-    height: 150px
+.footer-container__menu
+    width: 50px
+.uppercase
+    text-transform: uppercase
 .espacamento-proporcional-horizontal
     display: flex
     flex-direction: row
     align-items: center
     justify-content: space-around
     height: 50px
-.footer-container__menu
-    width: 50px
-.uppercase
-    text-transform: uppercase
 .home, .sobre
     display: flex
     flex-direction: column
@@ -30,6 +30,30 @@ textarea.pw-textarea
     justify-content: center
     height: calc(100vh - 50px)
     position: relative
+.c-menu
+    height: calc(100vh - 50px)
+    > .collection 
+        margin-top: 0
+        .collection-item
+            background-repeat: no-repeat
+            background-position: 0 center
+            background-size: cover
+            background-blend-mode: screen
+            background-color: #ccc !important
+            .title
+                font-weight: 600
+            .material-icons
+                font-size: 30px
+                font-weight: 600
+.collection__bolos
+    background-image: url(assets/images/chocolate-cake.jpg)
+.collection__doces
+    background-image: url(assets/images/rum-balls.jpg)
+.collection__bolos-decorados
+    background-image: url(assets/images/bolo-decorado.jpg)
+.collection__cupcakes
+    background-image: url(assets/images/cupcake.jpg)
+    
 .home__background
     background-image: url(assets/images/black-forest-cake.jpg)
     background-repeat: no-repeat
@@ -53,9 +77,12 @@ textarea.pw-textarea
     z-index: 9
 .btn__margin
     margin: 20px
-.c-orcamento__header
+.c-orcamento__header, 
+.c-menu__header
     padding: 20px 0
     margin-bottom: 20px
+.c-menu__header
+    margin-bottom: 0
 .c-orcamento__botoes-box
     display: flex
     flex-direction: row
