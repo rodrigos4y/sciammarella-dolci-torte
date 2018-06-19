@@ -13,6 +13,7 @@ import { OrcamentoComponent } from './pages/orcamento/orcamento.component';
 import { PedidoComponent } from './pages/pedido/pedido.component';
 import { NgxMaskModule } from 'ngx-mask';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     AboutComponent,
     CatalogoComponent,
     OrcamentoComponent,
-    PedidoComponent
+    PedidoComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
